@@ -7,9 +7,6 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    allowedDevOrigins: ['http://127.0.2.2:3000'], // adjust if you're using a different dev IP/port
-  },
 };
 
 export default nextConfig;

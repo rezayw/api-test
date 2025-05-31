@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Listing from "@/app/components/list/";
 
 const Home = async () => {
@@ -8,7 +9,7 @@ const Home = async () => {
 
   return (
     <div>
-          <h1>Paling Populer</h1>
+          <div><h1>Paling Populer</h1></div>
           <div className="grid md:grid-cols-5 sm:grid-cols-3 grid-cols-2 gap-4">
             {anime.data.map(data => {
             return (
