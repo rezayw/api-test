@@ -9,10 +9,24 @@ const Home = async () => {
 
   return (
     <>
+    {/* Paling Populer*/}
         <section>
-        <Header title="Paling Populer" linkHref="/populer" linkTitle="Lihat Semua"  />
+          <Header title="Paling Populer" linkHref="/populer" linkTitle="Lihat Semua"  />
         </section>
         <Listing api={topAnime}/>
+    
+    {/* Paling Terbaru*/}
+        <section>
+          <Header title="Paling Terbaru" linkHref="/new" linkTitle="Ikuti Sekarang"  />
+        </section>
+        <Listing api={topAnime}/>
+
+     {/* Paling Ramai*/}
+        <section>
+          <Header title="Paling Ramai" linkHref="/ramai" linkTitle="Paling Ramai"  />
+        </section>
+        <Listing api={topAnime}/>
+
     </>
     )
 }
