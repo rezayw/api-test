@@ -1,15 +1,19 @@
-import Link from "next/link"
-import inputSearch from "./inputSearch"
+"use client";
+
+import Link from "next/link";
+import InputSearch from "./InputSearch";
 
 const Navbar = () => {
-    return (
-        <header className="bg-amber-700">
-            <div className="flex md:flex-row flex-col justify-between p-4 gap-2">
-                <Link href="/" className="font-bold text-white text-2xl">API test</Link>
-                <inputSearch/>
-            </div>
-        </header>
-    )
-}
+  return (
+    <header className="bg-amber-500 shadow-md sticky top-0 z-50">
+      <nav className="flex flex-col md:flex-row items-center justify-between p-4 gap-3 max-w-7xl mx-auto">
+        <Link href="/" className="text-white text-2xl font-extrabold tracking-wide">
+          API Test
+        </Link>
+        <InputSearch />
+      </nav>
+    </header>
+  );
+};
 
-export default Navbar
+export default Navbar;
