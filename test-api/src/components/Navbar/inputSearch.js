@@ -14,6 +14,9 @@ const InputSearch = () => {
       event.preventDefault()
       const keyword = searchRef.current.value
       router.push(`/search/${keyword}`)
+      if(event.key === null) {
+        router.push(`/not-found`)
+      }
     }
     
   }
