@@ -1,31 +1,32 @@
-"use client";
+"use client"
 
-import { MagnifyingGlassIcon } from "@phosphor-icons/react";
-import { useRouter } from "next/navigation";
-import { useRef } from "react";
+import { MagnifyingGlassIcon } from "@phosphor-icons/react"
+import { useRouter } from "next/navigation"
+import { useRef } from "react"
 
 const InputSearch = () => {
-  const searchRef = useRef(null);
-  const router = useRouter();
+  const searchRef = useRef(null)
+  const router = useRouter()
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    const keyword = searchRef.current?.value.trim();
-    if (keyword) {
-      router.push(`/search/${keyword}`);
+  const handleSearch = (event) => {
+
+    if(event.key === "Enter" || event.type === "click") {
+      event.preventDefault()
+      const keyword = searchRef.current.value
+      router.push(`/search/${keyword}`)
     }
-  };
+    
+  }
 
   return (
     <form onSubmit={handleSearch} className="relative w-full max-w-md">
       <input
         ref={searchRef}
         placeholder="Cari anime..."
-        className="w-full p-2 pr-10 rounded bg-white text-black shadow"
+        className="w-full p-2 rounded bg-white text-black shadow"
+        onKeyDown={handleSearch}
       />
-      <button
-        type="submit"
-        className="absolute top-1/2 -translate-y-1/2 right-2 text-amber-500 hover:text-amber-600"
+      <button className="absolute top-1/2 -translate-y-1/2 right-2 text-amber-500 hover:text-amber-600 " onClick={handleSearch}
       >
         <MagnifyingGlassIcon size={24} />
       </button>

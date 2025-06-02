@@ -2,38 +2,24 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Listing = ({ api }) => {
-  if (!api?.data || api.data.length === 0) {
-    return (
-      <div className="px-4 py-8 text-center text-gray-500">
-        Tidak ada hasil ditemukan.
-      </div>
-    );
-  }
-
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-4 py-6">
-      {api.data.map((anime) => (
-        <Link
-          key={anime.mal_id}
-          href={`/${anime.mal_id}`}
-          className="cursor-pointer group bg-white rounded shadow hover:shadow-lg transition"
-        >
-          <div className="relative w-full aspect-[2/3] overflow-hidden rounded-t">
+    <div className="grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 px-4">
+      {api.data.map((anime) => {
+        return ( 
+        <Link href={`/${anime.mal_id}`} className="cursor-pointer bg-amber-50 hover:bg-amber-400 transition-all">
             <Image
               src={anime.images.webp.image_url}
-              alt={anime.title}
+              alt="....."
               width={350}
-              height={525}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+              height={350}
+              className="w-full max-h-64 object-cover"
             />
-          </div>
-          <h3 className="font-semibold text-sm md:text-base p-3 truncate">
-            {anime.title}
-          </h3>
+          <h3 className="font-bold md:text-xl text-md p-4">{anime.title}</h3>
         </Link>
-      ))}
+        )
+        })}
     </div>
-  );
-};
+  )
+}
 
-export default Listing;
+export default Listing
