@@ -17,15 +17,19 @@ const Pagination = ({ page, lastPage, setPage }) => {
         setPage((prevState) => prevState - 1)
         scrollTop()
     }
+    
     return (
         <div className="flex justify-center items-center py-4 px-4 gap-4 text-amber-50 text-2xl">
-            <button onClick={handlePrevPage} 
-            disabled={page <= 1}
-            className="transition-all hover:text-color-accent">Prev</button>
+            { page <= 1 ? null : 
+                <button onClick={handlePrevPage} 
+                className="transition-all hover:text-color-accent">Prev</button>
+            }
             <p>{page} of {lastPage} </p>
-            <button
-            disabled={page >= lastPage} 
-            onClick={handleNextPage} className="transition-all hover:text-color-accent">Next</button>
+
+            { page >= lastPage ? null : 
+                <button
+                onClick={handleNextPage} className="transition-all hover:text-color-accent">Next</button>
+            }
         </div>
     )
 }
