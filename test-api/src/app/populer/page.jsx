@@ -3,8 +3,9 @@
 import Listing from "@/components/list"
 import HeaderMenu from "@/components/utilities/HeaderMenu"
 import Pagination from "@/components/utilities/Pagination"
+import { getAnimeResponse } from "@/libs/api-libs"
 import React, { useEffect, useState } from "react"
-import { getAnimeResponse } from "../libs/api-libs"
+
 
 const Page = () => {
     const [page, setPage] = useState(1)
