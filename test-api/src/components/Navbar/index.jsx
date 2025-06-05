@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import InputSearch from "./InputSearch";
+import UserActionButton from "./UserActionButton";
 
 const Navbar = () => {
   return (
@@ -11,6 +12,7 @@ const Navbar = () => {
           API Test
         </Link>
         <InputSearch />
+        <UserActionButton />
       </nav>
     </header>
   );

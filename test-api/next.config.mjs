@@ -6,6 +6,9 @@ const nextConfig = {
         hostname: 'cdn.myanimelist.net',
         pathname: '/images/**',
       },
+      {
+        hostname: "avatars.githubusercontent.com",
+      },
     ],
   },
 };
