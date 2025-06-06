@@ -1,11 +1,11 @@
 import { getAnimeResponse } from "@/libs/api-libs"
 import VideoPlayer from "@/components/Utilities/VideoPlayer"
 import Image from "next/image"
-import CollectionButton from "@/components/AnimeList/CollectionButton"
+import CollectionButton from "@/components/MarvelList/CollectionButton"
 import { authUserSession } from "@/libs/auth-libs"
 import prisma from "@/libs/prisma"
-import CommentInput from "@/components/AnimeList/CommentInput"
-import CommentBox from "@/components/AnimeList/CommentBox"
+import CommentInput from "@/components/MarvelList/CommentInput"
+import CommentBox from "@/components/MarvelList/CommentBox"
 
 const Page = async ({ params: { id } }) => {
     const anime = await getAnimeResponse(`anime/${id}`)
