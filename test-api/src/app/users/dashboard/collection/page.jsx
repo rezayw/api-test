@@ -9,7 +9,7 @@ const Page = () => {
         <div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <Link href="/" className="relative border-2 border-amber-50">
-                <Image width={350} height={350} className="w-full"/>
+                <Image src="" alt="" width={350} height={350} className="w-full"/>
                 <div className="absolute flex items-center justify-center bottom-0 w-full bg-amber-50 h-16">
                     <h5 className="text-xl text-center"> Judul Anime</h5>
                 </div>
@@ -21,13 +21,13 @@ const Page = () => {
                 </div>
             </Link>
              <Link href="/" className="relative border-2 border-amber-50">
-                <Image width={350} height={350} className="w-full"/>
+                <Image src="" alt="" width={350} height={350} className="w-full"/>
                 <div className="absolute flex items-center justify-center bottom-0 w-full bg-amber-50 h-16">
                     <h5 className="text-xl text-center"> Judul Anime</h5>
                 </div>
             </Link>
              <Link href="/" className="relative border-2 border-amber-50">
-                <Image width={350} height={350} className="w-full"/>
+                <Image src="" alt="" width={350} height={350} className="w-full"/>
                 <div className="absolute flex items-center justify-center bottom-0 w-full bg-amber-50 h-16">
                     <h5 className="text-xl text-center"> Judul Anime</h5>
                 </div>

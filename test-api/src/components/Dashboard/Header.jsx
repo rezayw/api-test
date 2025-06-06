@@ -9,8 +9,6 @@ const Header = ({ title }) => {
     const handleBack = (event) => {
         event.preventDefault()
         router.back()
-        console.log("Back button clicked")
-    
     }
 
     return (
